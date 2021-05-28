@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Datagrama IP</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+	<!--background: #E5E5E5;-->
+	<main>
+		<fieldset>
+
+			<legend align="center">Datos de Entrada</legend>
+
+			<form action="" class="formulario" id="formulario">
+
+				<!-- Grupo: umt -->
+				<div class="formulario__grupo" id="grupo__umt">
+					<label for="umt" class="formulario__label">MTU</label>
+					<div class="formulario__grupo-input">
+						<input type="text" class="formulario__input" name="umt" id="umt" placeholder="ingrese MTU">
+						<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="formulario__input-error">La unidad maxima de transferencia es incorrecta</p>
+				</div>
+				<!-- Grupo: datagrama -->
+				<div class="formulario__grupo" id="grupo__datagrama">
+					<label for="datagrama" class="formulario__label">Datagrama</label>
+					<div class="formulario__grupo-input">
+						<input type="text" class="formulario__input" name="datagrama" id="datagrama"
+							placeholder="ingrese la longitud del datagrama">
+						<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="formulario__input-error">La longitud del datagrama es incorrecta</p>
+				</div>
+
+				<!-- Grupo: dereccion de origen -->
+				<div class="formulario__grupo" id="grupo__ipOrigen">
+					<label for="ipOrigen" class="formulario__label">Direccion IPv4 Origen</label>
+					<div class="formulario__grupo-input">
+						<input type="text" class="formulario__input" name="ipOrigen" id="ipOrigen"
+							placeholder="ingrese  IP">
+						<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="formulario__input-error">La direccion IPv4 de origen no es correcta</p>
+				</div>
+
+				<!-- Grupo: direccion ip destino -->
+
+				<div class="formulario__grupo" id="grupo__ipDestino">
+					<label for="ipDestino" class="formulario__label">Direccion IPv4 Destino prueba</label>
+					<div class="formulario__grupo-input">
+						<input type="text" class="formulario__input" name="ipDestino" id="ipDestino"
+							placeholder="ingrese  IP">
+						<i class="formulario__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="formulario__input-error">La direccion IPv4 de Destino no es correcta</p>
+				</div>
+
+				<!--bloque de Radio booton. -->
+				<div class="formulario__grupo_radio" id="grupo__protocolo">
+					<label for="long" class="fromulario_label">Tipo de protocolo:</label>
+					<input type="Radio" id="icmp" name="protocolo" class="protocolo">ICMP
+					<input type="Radio" id="udp" name="protocolo" class="protocolo">UDP
+					<input type="Radio" id="tcp" name="protocolo" class="protocolo">TCP
+				</div>
+
+				<!-- Grupo: Terminos y Condiciones -->
+				<div class="formulario__grupo" id="grupo__terminos">
+					<label class="formulario__label">
+						<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+						Datos completos.
+					</label>
+				</div>
+
+				<div class="formulario__mensaje" id="formulario__mensaje">
+					<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+						correctamente. </p>
+				</div>
+
+				<div class="formulario__grupo formulario__grupo-btn-enviar">
+					<button type="submit" class="formulario__btn" onclick="cargar()">Enviar</button>
+					<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!
+					</p>
+				</div>
+
+				<div class="formulario__grupo formulario__grupo-btn-enviar">
+					<button type="submit" class="formulario__btn" onclick="ejemplo()">Ejemplo</button>
+				
+				</div>
+			</form>
+		</fieldset>
+
+		<fieldset>
+
+			<legend align="center">Datagrama de salida Hexadecimal</legend>
+			<div  class="jhon">
+				<label for="">Datagrama Hexa :</label>
+				<div id="hexa1">Formato en Hexadecimal </br> </div>
+				<div id="hexa"></div>
+			
+
+			</div>
+
+		
+
+		</fieldset>
+
+		<fieldset>
+
+			<legend align="center">Datagrama de salida Binario</legend>
+
+			<div  class="jhon">
+				<label for="">Datagrama Binario :</label>
+				<div id="binario1"> formato en Binario</div>
+				<div id="binario"></div>
+				
+
+			</div>
+
+		
+
+		</fieldset>
+
+
+
+
+	</fieldset>
+
+	<fieldset>
+
+		<legend align="center">Datagrama de salida WiresharK</legend>
+
+		<div  class="jhon">
+			<label for="">Datagrama WiresharK :</label>
+			<div id="WiresharK1"></div>
+			<div id="WiresharK"></div>
+
+		</div>
+
+
+
+	</fieldset>
+
+		
+	</main>
+
+	<script src="js/formulario.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
